@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : Lab1.cpp
-// Author      : Cristian Magana
-// Version     : 1
+// Author      : Cristian Magaña
+// Version     : 2
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
 //============================================================================

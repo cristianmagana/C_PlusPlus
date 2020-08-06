@@ -1,8 +1,8 @@
 /*
  * Functions.h
  *
- *  Created on: August 5th, 2020
- *      Author: Cristian Magana
+ *  Created on: August 6th, 2020
+ *      Author: Cristian Magaña
  */
 
 #ifndef FUNCTIONS_H_
