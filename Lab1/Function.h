@@ -13,6 +13,5 @@ using namespace std;
 
 string printPyramid(int &num);
 int getUserInput();
-std::string rightSideBox(std::string box, int &num);
 
 #endif /* FUNCTION_H_ */

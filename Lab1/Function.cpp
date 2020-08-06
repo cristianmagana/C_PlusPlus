@@ -8,7 +8,7 @@
 #include "Function.h"
 #include <iostream>
 
-std::string rightSideBox(std::string box, int &num)
+/*std::string rightSideBox(std::string box, int &num)
 {
 	std::string boxreturn;
 	for (int i = 0; i < num; i++)
@@ -17,6 +17,7 @@ std::string rightSideBox(std::string box, int &num)
 	}
 	return boxreturn;
 }
+*/
 
 string printPyramid(int &num)
 {
@@ -36,7 +37,16 @@ string printPyramid(int &num)
 			std::cout << std::endl;
 			std::cout << std::string(num - i, ' ');
 
-			std::cout << rightSideBox("| ", i) << "|";
+
+			std::string boxreturn;
+			std::string box = "| ";
+			for (int k = 0; k < i; k++)
+			{
+				boxreturn +=box;
+			}
+			std::cout << boxreturn << "|";
+
+			//std::cout << rightSideBox("| ", i) << "|";
 			std::cout << std::endl;
 
 		}
