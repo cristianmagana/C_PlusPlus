@@ -1,0 +1,15 @@
+cd "working directory" 
+git init
+git add . "or file names"
+git commit -m "message"
+git remote add origin https://:yourgitrepo.git master:branch
+git add --all "or file names"
+git commit -m "message"
+git pull https://:yourgitrepo.git master:branch 
+git push https://:yourgitrepo.git master:branch 
+
+
+git remote -v
+git remote remove myOrigin
+git remote add origin https://:yourgitrepo.git
+git push -f origin master
