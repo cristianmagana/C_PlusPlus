@@ -14,19 +14,26 @@ string printPyramid(int &num)
 {
 
 	std::string result = " ";
+	std::string resulttemp = "";
+	std::string resulttemp2 = "";
+	std::string resultBase = "";
+	std::string resultFinal = "";
+	std::string resultBuild = "";
+	std::string *myPTR = &resultBuild;
+
+
 	if (!(num >= 1000) || num == 0)
 	{
 		for (int i = 1; i <= num; i++)
 		{
 
-			std::cout << std::string(num - i, ' ');
-			for (int j = 0; j < (2 * i + 1); j++)
-			{
-				std::cout << "-";
-			}
+			result = std::string(num - i, ' ');
 
-			std::cout << std::endl;
-			std::cout << std::string(num - i, ' ');
+			resulttemp = std::string(2 * i + 1, '-');
+
+			result = result + resulttemp;
+
+			resulttemp2 =  std::string(num - i, ' ');
 
 
 			std::string boxreturn;
@@ -35,21 +42,22 @@ string printPyramid(int &num)
 			{
 				boxreturn +=box;
 			}
-			std::cout << boxreturn << "|";
+			resulttemp2 = resulttemp2 + boxreturn + "|\n";
 
-			std::cout << std::endl;
+
+			resultFinal = result + '\n' + resulttemp2; 
+
+			*myPTR = *myPTR + resultFinal; 
 
 		}
-	}
-	if (num != 0 && num < 1000)
-	{
-		for (int i = 1; i <= (2 * num + 1); i++)
-		{
-			std::cout << "-";
-		}
-	}
+		
+		resultBase = std::string(2 * num + 1, '-');
 
-
+		*myPTR = *myPTR + resultBase;
+		std::cout << *myPTR;
+		
+	}
+	
 	
 	return result;
 
