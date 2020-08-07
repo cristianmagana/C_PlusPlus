@@ -1,25 +1,28 @@
 /*
- * Function.cpp
+ * Functions.cpp
  *
  *  Created on: August 6th, 2020
  *      Author: Cristian Magana
  */
 
-#include "Function.h"
+#include "Functions.h"
 #include <iostream>
 
 
 
-string printPyramid(int &num)
+string printPyramid(int num)
 {
 
 	std::string result = " ";
 	std::string resulttemp = "";
 	std::string resulttemp2 = "";
+	std::string resulttempbase = "";
 	std::string resultBase = "";
 	std::string resultFinal = "";
 	std::string resultBuild = "";
 	std::string *myPTR = &resultBuild;
+	std::string baseBottom = "";
+	std::string* basePTR = &baseBottom;
 
 
 	if (!(num >= 1000) || num == 0)
@@ -27,11 +30,19 @@ string printPyramid(int &num)
 		for (int i = 1; i <= num; i++)
 		{
 
-			result = std::string(num - i, ' ');
+			result = std::string(num - i+1, ' ');
 
-			resulttemp = std::string(2 * i + 1, '-');
+			//resulttemp = std::string(i, '-');
+
+			std::string top = "-";
+			for (int m = 0; m < 2*i-1 ; ++m)
+			{
+				resulttemp += top;
+			}
+
 
 			result = result + resulttemp;
+			resulttemp = "";
 
 			resulttemp2 =  std::string(num - i, ' ');
 
@@ -44,22 +55,29 @@ string printPyramid(int &num)
 			}
 			resulttemp2 = resulttemp2 + boxreturn + "|\n";
 
-
 			resultFinal = result + '\n' + resulttemp2; 
+
+			*basePTR = result;
 
 			*myPTR = *myPTR + resultFinal; 
 
 		}
-		
-		resultBase = std::string(2 * num + 1, '-');
+		if (num > 0)
+		{
 
-		*myPTR = *myPTR + resultBase;
-		std::cout << *myPTR;
+			//resultBase = std::string(2 * num - 1, '-');
+
+			*myPTR = *myPTR + *basePTR;
+
+		}
+		
+		//std::cout << resultBuild;
+		//std::cout << *myPTR;
 		
 	}
+	std::cout << resultBuild;
 	
-	
-	return result;
+	return resultBuild;
 
 }
 

@@ -5,13 +5,13 @@
  *      Author: Cristian Magana
  */
 
-#ifndef FUNCTION_H_
-#define FUNCTION_H_
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
 
 #include <string>
 using namespace std;
 
-string printPyramid(int &num);
+string printPyramid(int num);
 int getUserInput();
 
-#endif /* FUNCTION_H_ */
+#endif /* FUNCTIONS_H_ */
