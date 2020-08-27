@@ -1,0 +1,73 @@
+Exceptions:
+
+DuplicateMovieException
+MovieLimitException
+EmptyMovieInfoException
+MovieNotFoundException
+EmptyMovieListException
+EmptyRenterListException
+RenterLimitException
+RenterNotFoundException
+DuplicateRenterException
+InvalidRenterIDException
+EmptyRenterNameException
+RentedMovieException
+------------------------------------------------
+MovieManager:
+
+private:
+	array of Movies
+	number of current Movies
+public:
+	MovieManager()
+	run()
+	addMovie(Movies)
+	discontinueMovie(movie code)
+	--rentMovie(movie Code, Renter)
+	returnRental(renter ID, movie code)
+	printInventory()
+------------------------------------------------
+Movies:
+
+private:
+	movie code
+	movie name
+	number of rented copies of the movie
+	array of Renter renting the movie
+public:
+	Movies()
+	Movies(movie code, movie name)
+	getMovieCode()
+	getMovieName()
+	getRentedCopies()
+	--rentMovie(Renter)
+	returnRental(renter ID)
+	overloading << operator
+------------------------------------------------
+Renter:
+
+private:
+	renter ID
+	renter's first name
+	renter's last name
+public:
+	Renter()
+	Renter(renter ID, renter's first name, renter's last name)
+	setRenterID(renter ID)
+	getRenterID()
+	setRenterFirstName(renter's first name)
+	getRenterFirstName()
+	setRenterLastName(renter's last name)
+	getRenterLastName()
+------------------------------------------------
+MovieManagerUI:
+
+public:
+	printMenu()
+	getCommand()
+	getMovieName()
+	getMovieCode()
+	getRenterID()
+	getRenterFirstName()
+	getRenterLastName()
+	toUpper(command)

@@ -12,6 +12,24 @@
 
 string printPyramid(int num)
 {
+	if (num < 0)
+	{
+		std::cout << "Negative pyramid size." << std::endl;
+		return 1;
+	}
+	if (num == 0)
+	{
+		std::cout << "Invlaid pryamid size." << std::endl;
+		return 1;
+	}
+	if (num >= 1000)
+	{
+		std::cout << "Pyramid size too large." << std::endl;
+		return 1;
+
+	}
+
+
 
 	std::string result = " ";
 	std::string resulttemp = "";
@@ -86,18 +104,7 @@ string printPyramid(int num)
 	int n;
 	std::cin >> n;
 
-	if (n < 0)
-	{
-		std::cout << "Negative pyramid size." << std::endl;
-	}
-	if (n == 0)
-	{
-		std::cout << "Invlaid pryamid size." << std::endl;
-	}
-	if (n >= 1000)
-	{
-		std::cout << "Pyramid size too large." << std::endl;
-	}
+	
 
 	return n;
 }
