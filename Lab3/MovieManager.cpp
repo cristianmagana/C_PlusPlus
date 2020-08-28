@@ -33,12 +33,9 @@ void MovieManager::run()
 	else if (command == "DM")
 	{
 
-		
 			bool movieFound = false;
 			std::string movieCode = mmUI.getMovieCode();
 			discontinueMovie(movieCode);
-			return;
-		
 	}
 
 
@@ -52,10 +49,7 @@ void MovieManager::run()
 		std::string movieCode = mmUI.getMovieCode();
 		std::string renterFirstName = mmUI.getRenterFirstName();
 		std::string renterLastName = mmUI.getRenterLastName();
-		
 		rentMovie(movieCode, Renter(renterID, renterFirstName, renterLastName));
-			
-		
 	}
 			
 	
@@ -97,7 +91,6 @@ void MovieManager::addMovie(Movies movie)
 	if (numberOfAvailableMovies == 20)
 	{
 		throw MovieLimitException();
-		return;
 	}
 	else {
 		MoviesArray[numberOfAvailableMovies] = movie;
@@ -202,8 +195,6 @@ void MovieManager::returnRental(int rID, std::string mCode)
 			
 		}
 }
-
-
 
 void MovieManager::printInventory()
 {
