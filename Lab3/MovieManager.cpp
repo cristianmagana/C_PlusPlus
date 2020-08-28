@@ -22,20 +22,27 @@ void MovieManager::run()
 
 	if (command == "AM")
 	{
-			std::string movieCode = mmUI.getMovieCode();
-			std::string movieName = mmUI.getMovieName();
-			addMovie(Movies(movieCode, movieName));
-		}
-		
-	
+		std::string movieCode = mmUI.getMovieCode();
+		std::string movieName = mmUI.getMovieName();
+		addMovie(Movies(movieCode, movieName));
+	}
+
+
 
 	// Discontinues movie from movie array. If not movies present, throws exception. If rented copies are out it throws an exception.
 	else if (command == "DM")
 	{
+<<<<<<< HEAD
 
 			bool movieFound = false;
 			std::string movieCode = mmUI.getMovieCode();
 			discontinueMovie(movieCode);
+=======
+		bool movieFound = false;
+		std::string movieCode = mmUI.getMovieCode();
+		discontinueMovie(movieCode);
+		return;
+>>>>>>> 04246003985202282184a82bef409059696ef535
 	}
 
 
@@ -44,7 +51,6 @@ void MovieManager::run()
 
 	else if (command == "RM")
 	{
-
 		int renterID = mmUI.getRenterID();
 		std::string movieCode = mmUI.getMovieCode();
 		std::string renterFirstName = mmUI.getRenterFirstName();
@@ -52,10 +58,6 @@ void MovieManager::run()
 		rentMovie(movieCode, Renter(renterID, renterFirstName, renterLastName));
 	}
 			
-	
-
-
-
 	else if (command == "RR")
 	{
 		int renterID = mmUI.getRenterID();
@@ -74,7 +76,6 @@ void MovieManager::run()
 	// quits the program
 	else if (command == "Q")
 	{
-
 		exit(0);
 	}
 }
@@ -103,8 +104,8 @@ void MovieManager::addMovie(Movies movie)
 void MovieManager::discontinueMovie(std::string mCode)
 {
 
-	int i;
-	for (i = 0; i < 20; i++)
+	
+	for (int i = 0; i < 20; i++)
 		if (MoviesArray[i].getMovieCode() == mCode)
 		{
 			if (MoviesArray[i].getRentedCopies() != 0)
