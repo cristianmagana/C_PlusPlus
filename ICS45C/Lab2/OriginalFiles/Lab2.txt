@@ -1,0 +1,41 @@
+Director:
+
+private:
+	first name of Director
+	last name of Director
+	birth year of Director
+	number of films the director has directed
+public:
+	Director()
+	Director(first name, last name, year of birth, number of films)
+	setFirstName(first name)
+	getFirstName()
+	setLastName(last name)
+	getLastName()
+	setBirthYear(year of birth)
+	getBirthYear()
+	setNumOfMovies(number of films)
+	getNumOfMovies()
+------------------------------------------------
+Movie:
+
+private:
+	duration of the movie in minutes
+	year the movie was released
+	price of the movieinUSD
+	title of the movie
+public:
+	movieDirector - an object representing the Director of the movie
+	Movie()
+	Movie(duration of the movie, release year, movie price, movie title, director first name, director last name,
+	      director year of birth, number of films for the director)
+	Movie(movie)
+	setMovieTime(duration of the movie)
+	getMovieTime()
+	setMovieYearOut(release year)
+	getMovieYearOut()
+	setMoviePrice(movie price)
+	getMoviePrice()
+	setMovieTitle(movie title)
+	getMovieTitle()
+	printMovieInfo()

@@ -1,0 +1,11 @@
+FileHandling:
+
+private:
+	file name
+	height of the pyramid
+public:
+	FileHandling()
+	setFileName(file name)
+	setNumberOfPyramid(height of the pyramid)
+	printPyramid(height of the pyramid)
+	printOutPyramid()
