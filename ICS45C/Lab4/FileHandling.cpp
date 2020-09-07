@@ -1,4 +1,4 @@
-// Cristian Magana
+// Cristian Magana 
 // 37578770
 // File Handling class takes in user input of file name, appends the ".txt", requests the size of the pyramid to be printed and utilizes ostream and ofstream to write the pryamid to the file. 
 
