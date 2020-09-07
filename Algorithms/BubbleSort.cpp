@@ -1,4 +1,4 @@
-// adds renters to renters array
+// adds renters to renters array 
 			Renters[numberOfRentedCopies] = rentee;
 			numberOfRentedCopies++;
 
