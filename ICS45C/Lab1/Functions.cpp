@@ -2,7 +2,7 @@
  * Functions.cpp
  *
  *  Created on: August 6th, 2020
- *      Author: Cristian Magana
+ *      Author: Cristian Magana 
  */
 
 #include "Functions.h"
