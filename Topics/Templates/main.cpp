@@ -1,6 +1,6 @@
 // main.cpp
 //
-// ICS 65 Fall 2012
+// ICS 65 
 // Code Example
 //
 // This source demonstrates calling template functions in a few ways.
