@@ -8,6 +8,8 @@
 //	When you catch the object:
 // 		You are getting a reference to the object at the private location it was copied to. 
 //      Its not a const (or temporary) value so you can have a normal reference to it.
+
+
 #include <exception>
 #include <string>
 #include <iostream>
