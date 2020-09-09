@@ -3,9 +3,11 @@
 //
 // General rule is that exceptions are safe guards from bad things happening.
 // These are thrown near boundaries (i.e.; before segmenation fault occurs). 
-// Once the object is thrown, the bject is alive for the duration of the program and can be caught 
-// 		elsewhere in the program. 
-
+// Once the object is thrown, you create an object (of type E) locally. 
+// 		The processes of throwing copies this object to some private memory location not defined by the standard. 
+//	When you catch the object:
+// 		You are getting a reference to the object at the private location it was copied to. 
+//      Its not a const (or temporary) value so you can have a normal reference to it.
 #include <exception>
 #include <string>
 #include <iostream>
